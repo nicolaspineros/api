@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Adicionar Bono</title>
+</head>
+<body>
+    
+    <div class="container p-4">
+        <form action="" class="card card-body">
+            <h1>Adicionar Bono</h1>    
+            <div class="form-group">
+                <label for="id">id</label>
+                <input type="number" class="form-control" placeholder="Entry a New id" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" class="form-control" placeholder="Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Descripcion</label>
+                <textarea class="form-control" name="descripcion" rows="2" required>
+                </textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="id">product_id</label>
+                <input type="number" class="form-control" placeholder="product_id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id">valid_since</label>
+                <input type="datetime" class="form-control" placeholder="valid_since" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id">valid_until</label>
+                <input type="datetime" class="form-control" placeholder="valid_since" required>
+            </div>
+            <input type="button" value="Guardar Bono" class="btn btn-primary">
+        </form>
+    </div>
+
+</body>
+</html>
