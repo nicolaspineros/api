@@ -10,8 +10,10 @@
 </head>
 <body>
     
+    
+
     <div class="container p-4">
-        <form action="" class="card card-body">
+        <form method="POST" action="/adicionar" class="card card-body">
             <h1>Adicionar Bono</h1>    
             <div class="form-group">
                 <label for="id">id</label>
@@ -24,8 +26,8 @@
             </div>
             
             <div class="form-group">
-                <label for="description">Descripcion</label>
-                <textarea class="form-control" name="descripcion" rows="2" required>
+                <label for="description">Description</label>
+                <textarea class="form-control" name="description" rows="2" required>
                 </textarea>
             </div>
     
@@ -43,7 +45,7 @@
                 <label for="id">valid_until</label>
                 <input type="datetime" class="form-control" placeholder="valid_since" required>
             </div>
-            <input type="button" value="Guardar Bono" class="btn btn-primary">
+            <input type="submit" value="Guardar Bono" class="btn btn-primary">
         </form>
     </div>
 
