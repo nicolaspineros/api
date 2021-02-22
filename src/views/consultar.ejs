@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Consultar Bonos</title>
 </head>
 <body>
@@ -11,14 +13,14 @@
     <%-include('tools/navigation') %>
 
     <div class="container p-4">
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row">            
             <%bonos.forEach(function(bono){%>
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <%= bono.id %>                        
                     </div>
-                    <div class="card-body">
+                    <div class="card card-body">
                         <p><%= bono.name %></p>
                         <p><%= bono.description %></p>
                         <p><%= bono.product_id %></p>
@@ -26,8 +28,8 @@
                         <p><%= bono.valid_until %></p>                                                                                                               
                     </div>        
                 </div>
-            <% }); %>
             </div>
+            <% }); %>            
         </div>
     </div>
 
