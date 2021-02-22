@@ -8,26 +8,26 @@
 </head>
 <body>
 
+    <%-include('tools/navigation') %>
+
     <div class="container p-4">
         <div class="row">
-            <% bonos.forEach(function(bonos) { %>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <%= bonos.id %>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><%= bonos.name %></li>
-                                <li><%= bonos.description %></li>
-                                <li><%= bonos.product_id %></li>
-                                <li><%= bonos.valid_since %></li>
-                                <li><%= bonos.valid_until %></li>
-                            </ul>                                                            
-                        </div>        
+            <div class="col-md-4">
+            <%bonos.forEach(function(bono){%>
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <%= bono.id %>                        
                     </div>
+                    <div class="card-body">
+                        <p><%= bono.name %></p>
+                        <p><%= bono.description %></p>
+                        <p><%= bono.product_id %></p>
+                        <p><%= bono.valid_since %></p>
+                        <p><%= bono.valid_until %></p>                                                                                                               
+                    </div>        
                 </div>
-            <% }) %>             
+            <% }); %>
+            </div>
         </div>
     </div>
 

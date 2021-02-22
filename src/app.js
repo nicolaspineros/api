@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 
 //Routes
-app.use(require('./routes/index.js'));
+app.use(require('./routes/index'));
 
 //Statics
 app.use(express.static(path.join(__dirname, 'public')));

@@ -4,6 +4,7 @@ const fs = require('fs')
 
 const json_bonos = fs.readFileSync('src/products.json','utf-8');
 const bonos = JSON.parse(json_bonos);
+//const bonos = [];
 
 router.get('/', (req, res) => {
     res.render('index.ejs');
@@ -32,7 +33,7 @@ router.post('/adicionar', (req, res) => {
 
     bonos.push(newBono);
 
-    const json_bonos = JSON.stringify(bonos)
+    const json_bonos = JSON.stringify(bonos);
     fs.writeFileSync('src/products.json', json_bonos, 'utf-8');
 
     res.redirect('/');
