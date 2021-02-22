@@ -20,9 +20,4 @@ app.use(require('./routes/index'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// 404 handler
-app.use((req, res, next) => {
-    res.status(404).render('404 Not found');
-});
-
 module.exports = app;

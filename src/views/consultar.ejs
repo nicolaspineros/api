@@ -12,6 +12,8 @@
 
     <%-include('tools/navigation') %>
 
+    <%if (bonos.length > 0) {%>
+
     <div class="container p-4">
         <div class="row">            
             <%bonos.forEach(function(bono){%>
@@ -29,7 +31,12 @@
                     </div>        
                 </div>
             </div>
-            <% }); %>            
+            <% }); %>
+            <%} else {%>
+                <div class="card card-body text-center">
+                  <p>No Hay Bonos aun <a href="/adicionar">Adicionar Bono</a></p>
+                </div>
+                <%}%>            
         </div>
     </div>
 
