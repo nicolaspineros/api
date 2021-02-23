@@ -11,13 +11,10 @@ app.set('view engine', 'ejs');
 
 //middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //Routes
 app.use(require('./routes/index'));
-
-//Statics
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 module.exports = app;

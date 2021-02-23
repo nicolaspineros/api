@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <%-include('tools/header') %>
     <title>Consultar Bonos</title>
 </head>
 <body>
@@ -34,7 +30,7 @@
             <% }); %>
             <%} else {%>
                 <div class="card card-body text-center">
-                  <p>No Hay Bonos aun <a href="/adicionar">Adicionar Bono</a></p>
+                  <p>No Hay Bonos aun <a href="/adicionar-bono">Adicionar Bono</a></p>
                 </div>
                 <%}%>            
         </div>
