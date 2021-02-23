@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const {getCoupon, getProduct, getCid, getPid, createProduct, createCoupon} = require('../views/tools/controladores')
+const {getCoupon, getProduct, getCid, getPid, createProduct, createCoupon, validar} = require('../views/tools/controladores')
 
 router.get('/', (req, res) => {
     res.render('index.ejs');

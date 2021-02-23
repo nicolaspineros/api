@@ -8,6 +8,7 @@ const getCoupon = (req,res) => {
 const getCid = (req, res) => {
     const consult = getConnection().get('coupon').find({id: req.params.id}).value();
     res.json(consult);
+
 };
 
 const getPid = (req, res) => {
@@ -23,7 +24,7 @@ const getProduct = (req,res) => {
 const createCoupon = (req,res) => {
     
     const newCoupon = {
-        id: req.body,
+        id: req.body.id,
         name: req.body.name,
         description: req.body.description,
         product_id: req.body.product_id,

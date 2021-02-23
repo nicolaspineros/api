@@ -1,9 +1,30 @@
 {
   "product": [
     {
-      "id": 1,
+      "id": "1",
       "name": "pola"
+    },
+    {
+      "id": "2",
+      "name": "vino de mala muerte"
     }
   ],
-  "coupon": []
+  "coupon": [
+    {
+      "id": "1",
+      "name": "cupon pola",
+      "description": "pague 1 pola lleve 5",
+      "product_id": "1",
+      "valid_since": "2020-02-25T00:00:00.000",
+      "valid_until": "2020-02-25T23:59:00.999"
+    },
+    {
+      "id": "2",
+      "name": "cupon vino",
+      "description": "vinos de mala muerte com 20 porciento de descuento",
+      "product_id": 2,
+      "valid_since": "2020-02-25T00:10:00.000",
+      "valid_until": "2021-01-25T23:59:00.999"
+    }
+  ]
 }
