@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "ea11db3f-ed8a-4bf4-a466-0f4153b081e7",
+		"name": "Api_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Añadir Productos",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "tipo_usuario",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"vino de mala muerte\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/adicionar-producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adicionar-producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/consultar-producto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultar-producto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Bono",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "tipo_usuario",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"id\": 2,\r\n      \"name\": \"cupon vino\",\r\n      \"description\": \"vinos de mala muerte com 20 porciento de descuento\",\r\n      \"product_id\": 2,\r\n      \"valid_since\": \"2020-02-25T00:10:00.000\",\r\n      \"valid_until\": \"2021-01-25T23:59:00.999\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/adicionar-bono",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adicionar-bono"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Bonos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "tipo_usuario",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultar-bono",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultar-bono"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver detalle Bono",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "tipo_usuario",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/consultar-bono/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"consultar-bono",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
